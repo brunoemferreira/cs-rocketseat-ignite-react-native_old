@@ -28,12 +28,12 @@ export default function Home() {
         placeholderTextColor="#555"
         onChangeText={setNewSkill} />
 
-      <Button text='Add' />
+      <Button onPress={handleAddNewSkill} textButton='Adicionar' />
 
       <Text style={[styles.title, { marginVertical: 50 }]}>My Skills</Text>
       {
         mySkills.map(skill => (
-          <SkillCard key={skill} />
+          <SkillCard skill={skill} />
         ))
       }
     </View>
